@@ -19,6 +19,7 @@ Forward the public part of ParserInternal
 >      -- * internals
 >     ,parseName
 >     ,parseNameComponent
+>      ,QueryExpr(..)
 
 >     ) where
 >
@@ -26,6 +27,7 @@ Forward the public part of ParserInternal
 > import Database.HsSqlPpp.Internals.ParseErrors
 > import Database.HsSqlPpp.Dialects.Ansi
 > import Database.HsSqlPpp.Internals.Dialect
+> import Database.HsSqlPpp.Internals.AstInternal
 
 > defaultParseFlags :: ParseFlags
 > defaultParseFlags = ParseFlags {pfDialect = ansiDialect}
