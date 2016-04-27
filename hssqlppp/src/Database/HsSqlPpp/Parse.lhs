@@ -22,6 +22,15 @@ Forward the public part of ParserInternal
 >
 >      -- * added by lucasbraun in order to extend API
 >     ,QueryExpr(..)
+>     ,SelectList(..)
+>     ,SelectItem(..)
+>     ,SelectItemList
+>     ,ScalarExpr(..)
+>     ,TableRef(..)
+>     ,TableRefList
+>     ,Name(..)
+>     ,NameComponent(..)
+>     -- * end of extended API by lucasbraun 
 >
 >     ) where
 >
