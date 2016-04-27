@@ -19,8 +19,10 @@ Forward the public part of ParserInternal
 >      -- * internals
 >     ,parseName
 >     ,parseNameComponent
->      ,QueryExpr(..)
-
+>
+>      -- * added by lucasbraun in order to extend API
+>     ,QueryExpr(..)
+>
 >     ) where
 >
 > import Database.HsSqlPpp.Internals.ParseInternal
