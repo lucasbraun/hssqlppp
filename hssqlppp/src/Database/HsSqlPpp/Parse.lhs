@@ -30,6 +30,8 @@ Forward the public part of ParserInternal
 >     ,TableRefList
 >     ,Name(..)
 >     ,NameComponent(..)
+>     ,ScalarExprDirectionPair
+>     ,ScalarExprDirectionPairList
 >     -- * end of extended API by lucasbraun 
 >
 >     ) where
