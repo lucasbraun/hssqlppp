@@ -172,7 +172,7 @@ import Data.List
 import Data.Maybe
 import Data.Char
 import Text.Read
-import Control.Applicative
+import Control.Applicative()
 {-# LINE 177 "hssqlppp/src/Database/HsSqlPpp/Internals/AstInternal.hs" #-}
 
 {-# LINE 14 "hssqlppp/src/Database/HsSqlPpp/Internals/Annotation.ag" #-}

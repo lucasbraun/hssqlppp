@@ -51,7 +51,7 @@ should all be in one place.
 > import Database.HsSqlPpp.Internals.Catalog.CatalogTypes
 > import Database.HsSqlPpp.Internals.Utils
 > import Control.Monad
-> import Control.Applicative
+> import Control.Applicative()
 > import Control.Arrow
 
 > import Database.HsSqlPpp.Internals.TypeChecking.TypeConversion.OldTypeConversion
