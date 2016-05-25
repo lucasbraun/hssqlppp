@@ -405,6 +405,7 @@ question: should the catalog manage the following:
 > -- | Represents an error from an invalid catalog update or query
 > data CatError = RoleAlreadyExists String
 >               | RoleNotRecognised String
+>               | NotImplemented CatalogUpdate
 >                 deriving (Eq,Show)
 
 
@@ -468,7 +469,30 @@ question: should the catalog manage the following:
 
 > -- | A catalog value containing nothing
 > emptyCatalog :: Catalog
-> emptyCatalog = Catalog {cRoles = S.empty}
+> emptyCatalog = Catalog {
+>       cRoles = S.empty
+>       ,cSchemas = M.empty
+>       ,cCharacterSets = M.empty
+>       ,cCollations = M.empty
+>       ,cSequences = M.empty
+>       ,cTypeCategories = S.empty
+>       ,cExternalTypes = S.empty
+>       ,cCasts = S.empty
+>       ,cFunctions = M.empty
+>       ,cPrefixOps = M.empty
+>       ,cPostfixOps = M.empty
+>       ,cBinaryOps = M.empty
+>       ,cSpecialOps = M.empty
+>       ,cWindows = 0
+>       ,cAggregates = 0
+>       ,cTables = M.empty
+>       ,cConstraints = 0
+>       ,cDefaults = 0
+>       ,cViews = M.empty
+>       ,cDomainTypes = M.empty
+>       ,cCompositeTypes = M.empty
+>       ,cEnums = 0
+>   }
 
 > updateCatalog :: CatalogUpdate -> Catalog -> Either CatError Catalog
 > updateCatalog (CreateRole r) c@(Catalog {cRoles = rs})
@@ -485,6 +509,9 @@ todo: cascade the rename
 >     | not (r `S.member` rs) = Left $ RoleNotRecognised r
 >     | rn `S.member` rs = Left $ RoleAlreadyExists rn
 >     | otherwise = Right $ c {cRoles = S.insert rn $ S.delete r rs}
+
+> -- added non-implemented case for fixing ghci warnings
+> updateCatalog upd _ = Left $ NotImplemented upd
 
 
 > type RoleName = String
