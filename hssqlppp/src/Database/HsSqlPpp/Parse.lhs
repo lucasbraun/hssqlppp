@@ -30,6 +30,7 @@ Forward the public part of ParserInternal
 >     ,TableRefList
 >     ,Name(..)
 >     ,NameComponent(..)
+>     ,ScalarExprList
 >     ,ScalarExprDirectionPair
 >     ,ScalarExprDirectionPairList
 >     ,InList(..)
