@@ -21,6 +21,7 @@ Forward the public part of ParserInternal
 >     ,parseNameComponent
 >
 >      -- * added by lucasbraun in order to extend API
+>     ,Statement(..)
 >     ,QueryExpr(..)
 >     ,SelectList(..)
 >     ,SelectItem(..)
