@@ -34,6 +34,7 @@ Forward the public part of ParserInternal
 >     ,ScalarExprList
 >     ,ScalarExprDirectionPair
 >     ,ScalarExprDirectionPairList
+>     ,CaseScalarExprListScalarExprPairList
 >     ,InList(..)
 >     ,JoinExpr(..)
 >     -- * end of extended API by lucasbraun 
