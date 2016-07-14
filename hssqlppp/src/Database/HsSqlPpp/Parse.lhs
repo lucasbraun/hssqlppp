@@ -26,6 +26,7 @@ Forward the public part of ParserInternal
 >     ,SelectList(..)
 >     ,SelectItem(..)
 >     ,SelectItemList
+>     ,Distinct(..)
 >     ,ScalarExpr(..)
 >     ,TableRef(..)
 >     ,TableRefList
